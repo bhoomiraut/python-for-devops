@@ -5,7 +5,7 @@
 Today’s goal is to use **Python to interact with APIs and work with JSON data**.
 
 You will create a Python script that:
-- Calls a **public API** (example: GitHub API, JSONPlaceholder) [list](https://github.com/public-apis/public-apis)
+- Calls a **public API** (example: GitHub API, JSONPlaceholder) [list](https://github.com/public-apis/public-apis) or can access free APIs from: [google cloud](https://console.cloud.google.com/apis/library/)
 - Fetches data using the `requests` library
 - Parses the JSON response
 - Extracts meaningful information from the response
