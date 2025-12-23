@@ -1,18 +1,16 @@
-import psutil # import the lib from pypi
+#aapko kaam karna hai mi user se CPU threshold lo
+#Current CPU usage pata karo
+#agar cpu usage threshold se zyada hua, email kar do
 
-# aapko kaam karna hai ki user se CPU threshold lo
-# current cpu usage pata karo 
-# agar cpu usage threshold se zyada hua, email kar do
 
+import psutil #for getting CPU usage imported library psutil
 def check_cpu_threshold():
-    cpu_threshold = int(input("Enter the CPU Threshold")) # DONE
+    threshold = int(input("Enter your CPU Threshold: "))
 
-    current_cpu = psutil.cpu_percent(interval=1) # DONE
-    print("Current CPU %: ",current_cpu)
-    if current_cpu > cpu_threshold:  # DONE
-        print("CPU Alert Email sent...") # dummy email
-    else:
-        print("CPU in Safe state...")
-
-
+    cpu_usage = psutil.cpu_percent(interval=1) #interval=1 means it will take 1 second to calculate CPU usage
+    print(f"Current CPU Usage: {cpu_usage}%") # % - percentage or can write: print("Current CPU %:, cpu_usage))
+    if cpu_usage > threshold:
+        print("CPU usage Alert sent to Email!")
+    else:        
+        print("CPU usage is normal.")
 check_cpu_threshold()

@@ -1,38 +1,60 @@
-# hello dosto , kya haal chaal
+#comment: Used for developer understanding or notes
+print("Hello Dosto")
+#snake case notation always used in python for file names & variables
 
-# Snake Case in Python
-# Script - Set of Instructions
-# variables & constants
 
-# vary + able
-# yes = constant
-# 1 = constant
-# 100 = constant
+#script - set of instructions
+#variables & constants
 
-output = "yes" # variable
-output = "no" # = is called assignment operator
+#vary + able = changeable
+#yes = constant
+#1 = constant
+#100 = constant
 
-a = 100
-b = 200 
-env = "stg"
+output = "yes"  # variable
+output = "no"  # variable
+
+a = 100 #a - variable 100 - constant
+b = 200 #b - variable 200 - constant
+env = "stg" 
+env = "prod" 
+#env - changeable / variable
 
 print(a+b)
 
-# + - * / = (OPERATORS)
-#  a + b (OPERANDS)
-# a + b = (OPERATION)
+# + - * / % = (operators)
+# a b = (operands)
+# a + b = expression/ operation
 
 x = 50
 y = 20
-print(type(y))
+z = x * y #(operation)
+print("The multiplication of x & y:", z)
 
-#z = x * y # (OPERATION)
+e= 100
+f= 200
+print(f//e)
+# // - floor division | / - division (.0)
 
-#print("The multiplication of x & y",z)
+#Data Types
 
-# Data Types
+#int 1 2 23 500 700000000 -4
+#float 1.0 2.5 3.14 -4.5
+#bool True False 
+#str "this is a string" 'this is also a string'
 
-# int 1 2 23 500 700000000 -4
-# float 1.2  0.5 -2.3 
-# bool True False
-# str "this is string"
+print(y)
+print(type(y)) #type() - to check data type of variable
+print(type("y")) #string
+
+g = 3.14
+print(type(g)) #float
+
+h = True
+print(type(h)) #boolean
+
+i = 10
+print(i%2) #0
+# % - modulus (remainder)
+
+print(i%3) #1
