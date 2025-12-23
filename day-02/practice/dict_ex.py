@@ -1,19 +1,22 @@
+
+#dictionary- collection of key-value pairs
+
+
 info = {
-    "name" : "Shubham Bhaiya", #str
-    "city" : "Pune", #str
-    "qualification": "Mtech",
-    "age" : 29, # int
-    "salary": 22.5, # float
-    "married": True, # Bool
+    "name" : "Bhoomi", #string
+    "city" : "India", 
+    "qualification": "B.Tech",
+    "birth_date": 23,     #int
+    "married": False, # Boolean
     "favourites" : ["teaching", "movies", 18]
 }
 
 print("I live in",info["city"])
-print("I love ", info.get("favourite","Not Found"))
+print("I love ", info.get("favourite","Not Found")) 
 
-info.update({"channel": "TrainWithShubham"})
+info.update({"certifications": "AWS 2X"})
 
-print(dir(info))
+# print(dir(info))
 
-for key,value in info.items():
+for key,value in info.items(): 
     print(key,value)

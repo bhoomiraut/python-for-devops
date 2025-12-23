@@ -12,6 +12,7 @@ def get_joke(url_type,mood):
     headers = {
         "Accept": "application/json"
     }
+    
     joke = requests.get(url=url_type,headers=headers)
     if mood == "dad":
         
