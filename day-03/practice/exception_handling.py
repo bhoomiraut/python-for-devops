@@ -16,7 +16,7 @@ def search_youtube(query_text):
         query = (f"?part=snippet&q={query_text}&type=video&maxResults=5&key={API_KEY}")
                     
         full_url = BASE_URL + query
-        response = requests.get(full_url)
+        response = requests.get(full_url, timeout=10) #not required, but useful in devops scripts
 
         if response.status_code != 200:
             print("Error:", response.status_code)
@@ -24,10 +24,6 @@ def search_youtube(query_text):
             return
         
         data = response.json()
-
-        """"if "iteams" not in response.json():
-            print("No results found.")
-            return"""
 
         for item in data.get("items", []):
             title = item["snippet"]["title"]
@@ -38,12 +34,11 @@ def search_youtube(query_text):
             print("Channel:", channel)
             print("URL: https://www.youtube.com/watch?v=" + video_id)
 
-    except requests.exceptions.RequestException: #handle different types of errors
+    except requests.exceptions.RequestException: 
         print("Network or API error occurred. Please check your API or internet connection.")
 
     except Exception as e:
-        print("Unexpected error:", e) #e - variable to store error message
-        print("Please try again later.")
+        print("Unexpected error:", e) 
 
 if __name__ == "__main__":
     search_youtube(input("Enter vdo search term: "))
